@@ -193,7 +193,7 @@ form.addEventListener("submit", async (event) => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    const URL = "http://localhost:3000";
+    const URL = "https://signinup-backend-production.up.railway.app/";
     const response = await fetch(URL, {
       method: "POST",
       headers: {
@@ -203,7 +203,7 @@ form.addEventListener("submit", async (event) => {
     });
     const message = await response.json();
     resToBackend(message);
-  } else if (window.location.href !== "http://localhost:3000/register") {
+  } else if (window.location.href !== "https://signinup-backend-production.up.railway.app/register") {
     alert("Now sign in with your username and password.");
   }
 });
@@ -216,6 +216,6 @@ async function resToBackend(message) {
   } else if (message === "Data file is empty!") {
     console.log(message);
   } else {
-    window.location.href = `http://localhost:3000/profiles/${message}`;
+    window.location.href = `https://signinup-backend-production.up.railway.app/profiles/${message}`;
   }
 }

@@ -4,9 +4,9 @@ const signOpt = document.querySelector("#signBtn");
 function btnCheck() {
   const form = document.querySelector("form");
   if (submitBtn.textContent.trim() === "Log In") {
-    form.action = "http://localhost:3000/";
+    form.action = "https://signinup-backend-production.up.railway.app/";
   } else {
-    form.action = "http://localhost:3000/register";
+    form.action = "https://signinup-backend-production.up.railway.app/register";
   }
 }
 
