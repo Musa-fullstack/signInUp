@@ -9,13 +9,14 @@ function btnCheck() {
     form.action = "https://signinup-backend-production.up.railway.app/register";
   }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   btnCheck();
   inputClasses();
 });
 signOpt.addEventListener("click", () => {
-  btnCheck();
+  setTimeout(() => {
+    btnCheck();
+  }, 50);
 });
 
 function inputClasses() {
